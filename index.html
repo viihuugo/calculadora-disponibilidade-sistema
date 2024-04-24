@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Calculadora de Disponibilidade do Sistema</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="index.js"></script> 
+    </head> 
+    <body> 
+        <div class="content">
+            <h1>Calculadora de Disponibilidade de Sistema</h1>
+            <div class="time--selector">
+                <label for="tempoTotal">Tempo Total de Operação do Sistema:</label>
+                <span><input id="tempoTotal" type="number" class="time--input"></span>
+                <div class="time--options">
+                    <button id="total--time" class="time--btn--selector time-on active" value="horas" onclick="selectTimeOp(this)">HORAS</button>
+                    <button id="total--time" class="time--btn--selector time-on" value="dias" onclick="selectTimeOp(this)">DIAS</button>
+                    <button id="total--time" class="time--btn--selector time-on" value="meses" onclick="selectTimeOp(this)">MESES</button>
+                    <button id="total--time" class="time--btn--selector time-on" value="anos" onclick="selectTimeOp(this)">ANOS</button>
+                </div>
+            </div>
+            <div class="time--selector">
+                <label for="tempoForaDoAr">Tempo Fora do Ar do Sistema:</label>
+                <span><input id="tempoForaDoAr" type="number" class="time--input"></span>
+                <div class="time--options">
+                    <button class="time--btn--selector time-off active" value="horas" onclick="selectTimeOff(this)">HORAS</button>
+                    <button class="time--btn--selector time-off" value="dias" onclick="selectTimeOff(this)">DIAS</button>
+                    <button class="time--btn--selector time-off" value="meses" onclick="selectTimeOff(this)">MESES</button>
+                    <button class="time--btn--selector time-off" value="anos" onclick="selectTimeOff(this)">ANOS</button>
+                </div>
+            </div>
+            <div class="calculate--div">
+                <button class="calculate--btn" onclick="calcular()">CALCULAR!</button>
+            </div>
+            <div class="result--display">
+                <h2>Disponibilidade do Sistema:</h2>
+                <h3 id="resultado" class="result"></p>
+            </div>
+        </div>     
+
+        <div class="screen screen--flex action"> 
+            <h1>Calculadora de Disponibilidade de Sistema</h1>             
+            <button class="start--btn" onclick="startAnimation()">START</button>
+        </div>        
+            
+    </body> 
+</html> 
